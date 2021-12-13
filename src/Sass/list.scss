@@ -46,3 +46,11 @@
     }
   }
 }
+
+@media (max-width: 668px) {
+  .task-list {
+    &__item {
+      min-width: 75%;
+    }
+  }
+}

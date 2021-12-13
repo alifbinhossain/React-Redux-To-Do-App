@@ -18,3 +18,8 @@
   text-align: center;
   font-weight: 600;
 }
+@media (max-width: 668px) {
+  .heading-primary {
+    font-size: 3rem;
+  }
+}

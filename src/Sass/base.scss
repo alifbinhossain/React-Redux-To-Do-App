@@ -28,3 +28,11 @@ code {
   width: 25%;
   margin: 2rem auto 0;
 }
+
+@media (max-width: 668px) {
+  .banner {
+    display: block;
+    width: 90%;
+    margin: 2rem auto 0;
+  }
+}
