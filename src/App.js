@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from "react-redux";
+import InputBox from "./components/InputBox";
+import TaskLists from "./components/TaskLists.jsx";
+import banner from "./Checklist-pana.svg";
 
 function App() {
+  const totalTask = useSelector((state) => state.list.taskList).length;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="heading-primary">To Do List</h1>
+      <InputBox></InputBox>
+      {totalTask > 0 && (
+        <p className="text-result">Total Result : {totalTask}</p>
+      )}
+      {!totalTask && <img className="banner" src={banner} alt="" />}
+      <TaskLists></TaskLists>
     </div>
   );
 }

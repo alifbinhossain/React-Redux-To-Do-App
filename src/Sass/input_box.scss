@@ -1,0 +1,28 @@
+.input-box {
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid $color-secondary;
+  width: max-content;
+  overflow: hidden;
+
+  &__input {
+    padding: 0.8rem 1.4rem;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    padding: 0.4rem 2rem;
+    border: none;
+    border-left: 1px solid $color-secondary;
+    background-image: linear-gradient(to right, #4ecdc4, #556270);
+    color: $color-white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $color-secondary-light;
+    }
+  }
+}
